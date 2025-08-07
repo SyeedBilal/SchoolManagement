@@ -6,7 +6,7 @@ const addSchoolInfo= async(schoolData) => {
 
   try{
 
-    const query ='INSERT INTO schools (name,address,latitude,longitude) VALUES(?,?,?,?)';
+    const query ='INSERT INTO schools (id,name,address,latitude,longitude) VALUES(?,?,?,?,?)';
 
     return await db.execute(query,[schoolData.name,schoolData.address,schoolData.latitude,schoolData.longitude]);
   }
